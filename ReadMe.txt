@@ -9,3 +9,8 @@ Assertion of Account custom Fields.
 
 5.Batch class - inserts numerous new objects Accounts, Opportunities   
 6.Batch test class 
+
+________________________________________________
+05.02.18 Updates:
+1. Triggers has been improved
+2. Added Visualforce page to display Account's cunstom fields  

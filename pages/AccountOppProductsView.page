@@ -1,0 +1,39 @@
+<apex:page standardController="Account" recordSetVar="account">
+    
+    <apex:pageBlock title="Logged in as: {!$User.FirstName}">
+       Aggregate statistics for accounts orders
+   </apex:pageBlock>
+    
+    <apex:pageBlock>                           
+         <apex:dataTable value="{!account}" var="a"
+                cellPadding="4" border="1" align = "center" bgcolor="lightgrey">
+      <apex:column>
+          <apex:facet name="header"><font color = "red">Account Name</font></apex:facet>
+          <b>{!a.Name}</b>
+      </apex:column>      
+             
+      <apex:column>
+          <apex:facet name="header"><font color = "red">Orders Placed</font></apex:facet>
+      <b>{!a.Product__c} orders</b>
+      </apex:column>
+             
+      <apex:column>
+          <apex:facet name="header"><font color = "red">Total Products Ordered</font></apex:facet>
+      <b>{!a.Quantity__c} units</b></apex:column>
+                          
+      <apex:column>
+          <apex:facet name="header"><font color = "red">Total Price Paid</font></apex:facet>
+      {!a.prices__c} USD           
+      </apex:column>       
+     
+     </apex:dataTable>   
+     </apex:pageBlock>
+    
+     <apex:form>
+      <div align = "center">
+        <apex:commandButton value="Reload" onclick="window.location.top.reload();" />
+     </div>
+    </apex:form>   
+ 
+
+</apex:page>
