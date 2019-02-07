@@ -14,3 +14,7 @@ ________________________________________________
 05.02.18 Updates:
 1. Triggers improvement
 2. Added Visualforce page to display Account's cunstom fields  
+________________________________________________
+07.02.18 Updates: 
+1. Addded VF Page for Account Layout (OppLineVF.vfp) Preview at Screenshot #7
+2. Custom Controller class for this page (OppLineCustomController.cls) extension for Account standard controller 
