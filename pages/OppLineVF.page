@@ -1,0 +1,19 @@
+<apex:page standardController="Account" extensions="OppLineCustomController">
+    
+    <apex:pageBlock title="Opportunity line products for this Account">
+
+    <apex:pageBlockTable value="{!opptyList}" var="oppList">
+          
+          <apex:column >
+                    <apex:pageBlockTable value="{!oppList.OpportunityLineItems}"  var="oli">
+                    <apex:column value="{!oli.PricebookEntry.Name}"/>
+                    <apex:column value="{!oli.Quantity}"/>
+                    <apex:column value="{!oli.UnitPrice}"/>
+                    <apex:column value="{!oli.TotalPrice}"/>
+                    <apex:column value="{!oli.Opportunity.Name}"/>
+                </apex:pageBlockTable>
+        </apex:column>                   
+ </apex:pageBlockTable>
+</apex:pageBlock>
+    
+</apex:page>
